@@ -629,10 +629,6 @@ video {
   width: 40%;
 }
 
-.w-3\/5 {
-  width: 60%;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -930,9 +926,5 @@ video {
 
   .md\:justify-start {
     justify-content: flex-start;
-  }
-
-  .md\:bg-cover {
-    background-size: cover;
   }
 }
