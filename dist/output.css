@@ -1316,7 +1316,21 @@ html{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+@media (min-width: 640px) {
+  .sm\:w-full {
+    width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
+  .md\:bottom-5 {
+    bottom: 1.25rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1344,6 +1358,10 @@ html{
 
   .md\:w-\[150px\] {
     width: 150px;
+  }
+
+  .md\:w-4\/5 {
+    width: 80%;
   }
 
   .md\:flex-row {
