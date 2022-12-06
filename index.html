@@ -50,7 +50,7 @@
     
   </header>
   <section class="w-11/12 mx-auto my-7">
-    <div class="flex flex-col items-center pb-9 border-b-2 border-sky-400">
+    <div class="flex flex-col text-center items-center pb-9 border-b-2 border-sky-400">
       <h2 class="font-bold text-3xl tracking-wide underline decoration-sky-400">Find everything you wish for !</h2>
       <p class="pt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ipsum quidem eum molestiae cupiditate, harum eos ducimus neque enim fuga.</p>
     </div>
@@ -58,13 +58,9 @@
     <div class="my-6">
       <div class="flex justify-between items-center">
         <h3 class="font-semibold tracking-wide text-lg">Trendings</h3>
-        <div class="flex items-center gap-4 cursor-pointer">
-          <p class="text-opacity-30">See more</p>
-          <i class="fa-solid fa-chevron-right  text-opacity-30"></i>
-        </div>
       </div>
-      <div class="flex gap-6 mt-5">
-        <div class="w-[150px] h-[calc(150px * 1.5)]">
+      <div class="flex gap-6 mt-5 overflow-x-auto">
+        <div class="md:min-w-[150px] max-w-[150px]">
           <a href="black.html">
             <div class=" rounded-lg overflow-hidden w-full relative">
               <img src="img/black-panther.webp" alt="">
@@ -80,6 +76,8 @@
             </div>
           </a>
         </div>
+        
+
       </div>
     </div>
   </section>

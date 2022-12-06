@@ -51,57 +51,30 @@
   </header>
   
   
-  <section class="w-11/12 m-auto my-28">
-    <div class=" flex flex-col md:flex-row items-center gap-9">
-      
-      <img src="img/profile.png" alt="" class="w-56 rounded-[50%] border-2 border-sky-400">
-      
-      <div>
-        <h2 class="text-2xl">Thomas <span class="uppercase">Doret-Gaïsset</span></h2>
-        <p class="mt-10">
-          Bio : 
-          <br>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam animi magnam rerum facere eos libero, maxime ex reprehenderit nobis optio quae hic atque? Amet tempora beatae accusantium ullam aperiam magnam et placeat praesentium tenetur itaque repudiandae quisquam quibusdam necessitatibus assumenda inventore quidem mollitia sint similique numquam ratione, sunt nulla.
-        </p>
-      </div>
-    </div>
-  </section>
-  <div class="hidden w-full h-full fixed z-10 left-0 top-0 overflow-auto bg-black bg-opacity-40 modal-form">
-    <div class="relative p-5 my-[15%] mx-auto w-[40%] bg-sky-800 rounded-3xl">
-      <i class="fa-solid fa-xmark absolute right-4 cursor-pointer modal-close"></i>
-      <form action="" >
-        <h3 class="text-xl uppercase underline pb-5">Create a new album</h3>
-        <div class="gap-4 flex">
-          <input type="text" name="name" id="name" placeholder="Name" class="bg-sky-800 rounded-[10px] py-2 px-4 border-sky-400 border-2 outline-none">
-          <input type="submit" value="Create" class="cursor-pointer bg-sky-400 py-2 px-4 rounded-lg">
-        </div>
-        
-      </form>
-    </div>
-    
-  </div>
-
-  <div class="w-11/12 m-auto">
-    <div class="pb-[5px]">
-      <h2 class="text-2xl font-semibold">Albums</h2>
-    </div>
-    <hr>
-  </div>
-
-  
-
-  <section class="w-11/12 justify-center md:justify-start m-auto my-10 flex flex-wrap gap-5">
-    <a href="myalbum.html" class="w-full md:w-[150px]">
-      <div class=" h-[calc(150px*1.5)] rounded-lg bg-[url('/img/black-panther.webp')] bg-cover bg-center flex items-end overflow-hidden">
-        <div class="pl-5 pb-5 bg-white bg-opacity-30 w-full">
-          <p class="uppercase font-semibold">Seen</p>
-          <p>15 films</p>
-        </div>
-      </div>
+  <section class="w-11/12 m-auto my-7">
+    <a href="account.html" class="hover:text-sky-400">
+      <i class="fa-solid fa-chevron-left"></i>
+      Back
     </a>
-    
-    <div class="w-full md:w-[150px] h-[calc(150px*1.5)] rounded-lg bg-white bg-opacity-30 flex items-center justify-center cursor-pointer modal-open">
-      <i class="fa-solid fa-circle-plus text-3xl"></i>
+    <h2 class="font-semibold text-3xl underline decoration-sky-400 mt-4">Seen</h2>
+
+    <div class="w-full my-7">
+      <div class="w-[150px] h-[calc(150px * 1.5)]">
+        <a href="black.html">
+          <div class=" rounded-lg overflow-hidden w-full relative">
+            <img src="img/black-panther.webp" alt="">
+            <div class="absolute top-1 right-1 w-[38px] h-[38px] rounded-full bg-zinc-700 flex justify-center items-center p-[4px]">
+              <div class="bg-green-400 w-full h-full rounded-full flex justify-center items-center  ">
+                <p class="font-bold text-xs">75%</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full flex flex-wrap content-start relative py-2 px-2">
+            <p class="font-semibold text-sm">Black Panther : Wakanda Forever</p>
+            <p class="text-gray-400 text-sm">9 nov. 2022</p>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
   <script src="script.js"></script>
