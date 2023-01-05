@@ -9,7 +9,37 @@
   <title>Log In - TBM</title>
 </head>
 <body class="bg-[url('/img/bg.svg')] bg-cover bg-no-repeat text-white text-base m-0 p-0 box-border w-full">
-  <div class="hidden w-4/5 h-[100vh]  pl-14 pt-[50%] items-start gap-24 flex-col md:hidden">
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+
+  
+  $db = mysqli_connect('localhost','root','root','back-dev');
+
+  
+  $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+  $result = mysqli_query($db, $query);
+  $user = mysqli_fetch_assoc($result);
+
+  
+  if ($user) {
+    session_start();
+    $_SESSION['logged_in'] = true;
+    header('Location: welcome.php');
+    exit;
+  }
+  
+  else {
+    $error_msg = "Incorrect email or password";
+  }
+}
+?>
+
+
+<div class="hidden w-4/5 h-[100vh]  pl-14 pt-[50%] items-start gap-24 flex-col md:hidden">
     <div class="block md:hidden">
       <form action="" class="relative">
         <input type="search" name="" id="" placeholder="Search" class="bg-white bg-opacity-30 px-4 py-2 rounded-full text-white outline-0">
@@ -53,7 +83,7 @@
   <section class="w-full items-center flex justify-center h-[91vh]">
     <div class="w-[90%] md:w-fit mx-auto rounded-xl bg-slate-500 bg-opacity-30 py-5 px-10 flex flex-col">
       <h2 class="underline uppercase text-3xl">Log In</h2>
-      <form action="" class="py-8 flex flex-col">        
+      <form action="login.php" method="post" class="py-8 flex flex-col">        
         <input type="email" name="mail" id="mail" placeholder="Email" class="py-2 px-4 rounded-lg bg-slate-600 shadow-md outline-none mt-4">
         <input type="password" name="password" id="password" placeholder="Password" class="py-2 px-4 rounded-lg bg-slate-600 shadow-md outline-none mt-4">
         <button type="submit" class="mt-8 py-2 px-4 bg-sky-900 rounded-lg hover:shadow-md hover:bg-sky-600 duration-[250ms]">
