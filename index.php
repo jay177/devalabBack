@@ -9,7 +9,8 @@
   <title>Home - TBM</title>
 </head>
 <body class="bg-[url('/img/bg.svg')] bg-cover bg-no-repeat text-white text-base m-0 p-0 box-border w-full">
-  <div class="hidden w-4/5 h-[100vh]  pl-14 pt-[50%] items-start gap-24 flex-col md:hidden">
+
+<div class="hidden w-4/5 h-[100vh]  pl-14 pt-[50%] items-start gap-24 flex-col md:hidden">
     <div class="block md:hidden">
       <form action="" class="relative">
         <input type="search" name="" id="" placeholder="Search" class="bg-white bg-opacity-30 px-4 py-2 rounded-full text-white outline-0">
