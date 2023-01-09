@@ -15,7 +15,7 @@ if ($_POST){
     session_start();
     
     $_SESSION['name'] = $userData['first_name'];
-    $_SESSION['mail'] = $userData['mail'];
+    $_SESSION['mail'] = $userData['email'];
     $_SESSION['id'] = $userData['id'];
 
     header('Location: ./index.php?name=' . $_SESSION['name']);
@@ -54,7 +54,7 @@ if ($_POST){
           Submit
         </button>
       </form>
-      <p class="text-center">Don't have an account ? <a href="signup.html" class="text-blue-400 underline">Sign up</a></p>
+      <p class="text-center">Don't have an account ? <a href="signup.php" class="text-blue-400 underline">Sign up</a></p>
     </div>
   </section>
 </body>

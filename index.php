@@ -1,6 +1,8 @@
 <?php
-require_once './Class/Connection.php';
+
 session_start();
+
+require_once './Class/Connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +18,15 @@ session_start();
 <body class="bg-[url('../img/bg.svg')] bg-cover bg-no-repeat text-white text-base m-0 p-0 box-border w-full">
 
   <?php require_once('./src/components/header.php') ?>
+
+  <div class="flex flex-col text-center items-center py-9 border-b-2 border-sky-400">
+      <h2 class="font-bold text-3xl tracking-wide underline decoration-sky-400">Find everything you wish for !</h2>
+      <p class="pt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ipsum quidem eum molestiae cupiditate, harum eos ducimus neque enim fuga.</p>
+
+      <?php if (isset($_SESSION['name'])): ?>
+        <h3>Welcome <?= $_SESSION['name'] ?> </h3>
+      <?php endif; ?>
+    </div>
   <section class="w-11/12 mx-auto my-7">
     
 

@@ -20,7 +20,7 @@ if ($_POST){
   }
 }
 ?>
-<?php if (isset($error_msg)) { echo $error_msg; } ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

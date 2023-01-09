@@ -24,25 +24,14 @@
       <ul class="flex">
         <li><a href="index.php" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full duration-[250ms]">Home</a></li>
         <li><a href="recherche.php" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full duration-[250ms]">Browse</a></li>
-        <li><a href="" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full duration-[250ms]">Discover</a></li>
+        <li><a href="categorie.php" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full duration-[250ms]">Discover</a></li>
         <?php if(isset($_SESSION['name'])) :  ?>
-        <li><a href="./logout.php" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full duration-[250ms]">Logout</a></li>
-
+          <li><a href="./account.php" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full duration-[250ms]">Account</a></li>
+          <li><a href="./logout.php" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full duration-[250ms]">Logout</a></li>
+        <?php else : ?>
+          <a href="loginForm.php">Log In</a>
         <?php endif; ?>
       </ul>
     </nav>
 </header>
 
-<div class="flex flex-col text-center items-center py-9 border-b-2 border-sky-400">
-      <h2 class="font-bold text-3xl tracking-wide underline decoration-sky-400">Find everything you wish for !</h2>
-      <p class="pt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ipsum quidem eum molestiae cupiditate, harum eos ducimus neque enim fuga.</p>
-
-      <?php if (isset($_SESSION['name'])): ?>
-        <h3>Welcome <?= $_SESSION['name'] ?> </h3>
-      <?php else : ?>
-      <div class="mt-5 gap-6 flex items-center">
-        <a href="loginForm.php">Log In</a>
-        <a href="signup.php" class="py-2 px-4 rounded-full bg-sky-400">Sign Up</a>
-      </div>
-      <?php endif; ?>
-    </div>

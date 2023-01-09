@@ -1,9 +1,17 @@
 <?php
+
+
 session_start();
 
-if (isset($_SESSION['name'])){
+require_once './Class/Connection.php';
+
+if (!isset($_SESSION['name'])){
   header('Location: index.php');
 }
+
+$connection = new Connection();
+$result = $connection->selectUser($_SESSION['mail']);
+
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +34,7 @@ if (isset($_SESSION['name'])){
       <img src="img/profile.png" alt="" class="w-56 rounded-[50%] border-2 border-sky-400">
       
       <div>
-        <h2 class="text-2xl">Thomas <span class="uppercase">Doret-Gaïsset</span></h2>
+        <h2 class="text-2xl"><?= $result['first_name'] ?> <span class="uppercase"><?= $result['last_name'] ?></span></h2>
         <p class="mt-10">
           Bio : 
           <br>
