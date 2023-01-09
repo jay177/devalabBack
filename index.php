@@ -17,19 +17,7 @@ session_start();
 
   <?php require_once('./src/components/header.php') ?>
   <section class="w-11/12 mx-auto my-7">
-    <div class="flex flex-col text-center items-center pb-9 border-b-2 border-sky-400">
-      <h2 class="font-bold text-3xl tracking-wide underline decoration-sky-400">Find everything you wish for !</h2>
-      <p class="pt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ipsum quidem eum molestiae cupiditate, harum eos ducimus neque enim fuga.</p>
-
-      <?php if (isset($_SESSION['name'])): ?>
-        <h3>Welcome <?= $_SESSION['name'] ?> </h3>
-      <?php else : ?>
-      <div class="mt-5 gap-6 flex items-center">
-        <a href="loginForm.php">Log In</a>
-        <a href="signup.php" class="py-2 px-4 rounded-full bg-sky-400">Sign Up</a>
-      </div>
-      <?php endif; ?>
-    </div>
+    
 
     <div class="my-6">
       <div class="flex justify-between items-center">

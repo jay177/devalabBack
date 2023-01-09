@@ -42,15 +42,11 @@ function getMovies(searchText) {
 			<div class="md:min-w-[150px] max-w-[150px] w-[150px]">
           <a href="">
             <div class=" rounded-lg overflow-hidden w-full relative">
-              <img src="${poster}" alt="poster" class="">
-              <div class="absolute top-1 right-1 w-[38px] h-[38px] rounded-full bg-zinc-700 flex justify-center items-center p-[4px]">
-                <div class="bg-green-400 w-full h-full rounded-full flex justify-center items-center  ">
-                  <p class="font-bold text-xs">${note*10}%</p>
-                </div>
-              </div>
+              <img src="${poster}" alt="poster">
+              
             </div>
             <div class="w-full flex flex-col content-start relative py-2 px-2">
-              <p class="font-semibold text-sm">${movies[index].title}</p>
+              <p class="font-semibold text-sm whitespace-normal">${movies[index].title}</p>
               <p class="text-gray-400 text-sm">${year}</p>
             </div>
           </a>

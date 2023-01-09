@@ -48,7 +48,6 @@ if ($_POST){
     <div class="w-[90%] md:w-fit mx-auto rounded-xl bg-slate-500 bg-opacity-30 py-5 px-10 flex flex-col">
       <h2 class="underline uppercase text-3xl">Log In</h2>
       <form action="loginForm.php" method="post" class="py-8 flex flex-col"> 
-        <label for="email">Email:</label><br>       
         <input type="email" id="email" name="email" placeholder="Email" class="py-2 px-4 rounded-lg bg-slate-600 shadow-md outline-none mt-4">
         <input type="password" name="password" id="password" placeholder="Password" class="py-2 px-4 rounded-lg bg-slate-600 shadow-md outline-none mt-4">
         <button type="submit" class="mt-8 py-2 px-4 bg-sky-900 rounded-lg hover:shadow-md hover:bg-sky-600 duration-[250ms]">

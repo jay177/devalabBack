@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (isset($_SESSION['name'])){
+  header('Location: index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,47 +16,8 @@
   <script src="https://kit.fontawesome.com/23761b7654.js" crossorigin="anonymous"></script>
   <title>Account - TBM</title>
 </head>
-<body class="bg-[url('/img/bg.svg')] bg-cover bg-no-repeat text-white text-base m-0 p-0 box-border w-full h-full">
-  <div class="hidden w-4/5 h-[100vh]  pl-14 pt-[50%] items-start gap-24 flex-col md:hidden">
-    <div class="block md:hidden">
-      <form action="" class="relative">
-        <input type="search" name="" id="" placeholder="Search" class="bg-white bg-opacity-30 px-4 py-2 rounded-full text-white outline-0">
-        <button type="submit" class="bg-sky-400 bg-opacity-30 px-4 py-2 rounded-full text-white outline-0 absolute right-0">
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </form>
-    </div>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Albums</li>
-        <li>Account</li>
-      </ul>
-    </nav>
-  </div>
-  <header class="w-full h-[9vh] border-b-2 border-gray-400 flex items-center justify-between px-10 relative">
-    <div class="burger md:hidden">
-      <i class="fa-solid fa-bars-staggered"></i>
-    </div>
-    <h1 class="font-bold tracking-wider text-lg"><a href="index.html">The Best <span class="text-sky-400">Movies</span></a></h1>
-    <nav class="hidden md:block">
-      <ul class="flex">
-        <li><a href="index.html" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full transition-all">Home</a></li>
-        <li><a href="" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full transition-all">Albums</a></li>
-        <li><a href="account.html" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full transition-all">Account</a></li>
-      </ul>
-    </nav>
-    
-    <div class="hidden md:block">
-      <form action="" class="relative">
-        <input type="search" name="" id="" placeholder="Search" class="bg-white bg-opacity-30 px-4 py-2 rounded-full text-white outline-0">
-        <button type="submit" class="bg-sky-400 bg-opacity-30 px-4 py-2 rounded-full text-white outline-0 absolute right-0">
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </form>
-    </div>
-    
-  </header>
+<body class="bg-[url('../img/bg.svg')] bg-cover bg-no-repeat text-white text-base m-0 p-0 box-border w-full h-full">
+<?php require_once('./src/components/header.php') ?>
   
   
   <section class="w-11/12 m-auto my-28">
