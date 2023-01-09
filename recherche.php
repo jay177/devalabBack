@@ -29,20 +29,7 @@
             <div class="sbox">
 
                 <div>
-                    <center>
-                        <div class="content">
-                            <h1 style="color: white">MoviesInfo: Information about over 10k+ movies</h1>
-                            <p style="color: white">
-                                Welcome to
-                                <span style="font-weight:bold; color: #6AC045">MoviesInfo</span> | It is site where you can view information about your favourite movie.
-                                MoviesInfo are best known for the excellent
-                                <span style="font-weight:bold; color: #6AC045">Information</span> for each and every released and not released movies. We are providing
-                                this information by the help of
-                                <span style="font-weight:bold; color: #6AC045">MovieDB </span> which known for their movies resources.
-                                <span style="font-weight:bold; color: #6AC045">Browse</span> Movie and get detail aspect of your favourite movie.
-                            </p>
-                        </div>
-                    </center>
+                   
                     <form id="searchForm">
                         <input type="text" class="searchBox" placeholder="Search Movies here" id="searchText">
                     </form>
