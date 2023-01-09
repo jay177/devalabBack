@@ -124,7 +124,7 @@ function getTopRated(){
       let year = date.slice(0,4);
       let note = movies[index].vote_average
       output += `
-      <div class="md:min-w-[150px] max-w-[150px]">
+      <div class="md:min-w-[150px] md:max-w-[150px]">
           <a href="">
             <div class=" rounded-lg overflow-hidden w-full relative">
               <img src="${poster}" alt="poster">
