@@ -12,6 +12,9 @@ if (!isset($_SESSION['name'])){
 $connection = new Connection();
 $result = $connection->selectUser($_SESSION['mail']);
 
+
+$userAlbums = $connection->getUserAlbums($_SESSION['mail']);
+
 ?>
 
 <!DOCTYPE html>
@@ -43,21 +46,7 @@ $result = $connection->selectUser($_SESSION['mail']);
       </div>
     </div>
   </section>
-  <div class="hidden w-full h-full fixed z-10 left-0 top-0 overflow-auto bg-black bg-opacity-40 modal-form">
-    <div class="relative p-5 my-[15%] mx-auto w-[40%] bg-sky-800 rounded-3xl">
-      <i class="fa-solid fa-xmark absolute right-4 cursor-pointer modal-close"></i>
-      <form action="" >
-        <h3 class="text-xl uppercase underline pb-5">Create a new album</h3>
-        <div class="gap-4 flex">
-          <input type="text" name="name" id="name" placeholder="Name" class="bg-sky-800 rounded-[10px] py-2 px-4 border-sky-400 border-2 outline-none">
-          <input type="submit" value="Create" class="cursor-pointer bg-sky-400 py-2 px-4 rounded-lg">
-        </div>
-        
-      </form>
-    </div>
-    
-  </div>
-
+  
   <div class="w-11/12 m-auto">
     <div class="pb-[5px]">
       <h2 class="text-2xl font-semibold">Albums</h2>
@@ -65,19 +54,22 @@ $result = $connection->selectUser($_SESSION['mail']);
     <hr>
   </div>
 
-  
-
   <section class="w-11/12 justify-center md:justify-start m-auto my-10 flex flex-wrap gap-5">
-    <div class="w-full md:w-1/5 h-[50vh] rounded-[30px] bg-[url('/img/black-panther.webp')] bg-cover bg-center flex items-end overflow-hidden">
-      <div class="pl-5 pb-5 bg-white bg-opacity-30 w-full">
-        <p class="uppercase font-semibold">Seen</p>
-        <p>15 films</p>
+    <?php foreach ($userAlbums as $album) :  ?>
+      <div class="w-full md:w-1/5 h-[50vh] rounded-[30px] bg-[url('../img/black-panther.webp')] bg-cover bg-center flex items-end overflow-hidden">
+        <div class="pl-5 pb-5 bg-white bg-opacity-30 w-full">
+          <p class="uppercase font-semibold"><?= $album['name']; ?></p>
+          <p>15 films</p>
+        </div>
       </div>
-    </div>
+    <?php endforeach; ?>
     <div class="w-full md:w-1/5 h-[50vh] rounded-[30px] bg-white bg-opacity-30 flex items-center justify-center cursor-pointer modal-open">
       <i class="fa-solid fa-circle-plus text-3xl"></i>
     </div>
   </section>
+  <script src="https://kit.fontawesome.com/23761b7654.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

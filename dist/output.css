@@ -907,6 +907,10 @@ video {
   background-image: url('/img/bg.svg');
 }
 
+.bg-\[url\(\'\.\.\/img\/black-panther\.webp\'\)\] {
+  background-image: url('../img/black-panther.webp');
+}
+
 .bg-cover {
   background-size: cover;
 }
