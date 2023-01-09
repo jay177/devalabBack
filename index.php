@@ -1,3 +1,8 @@
+<?php
+require_once './Class/Connection.php';
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +21,14 @@
       <h2 class="font-bold text-3xl tracking-wide underline decoration-sky-400">Find everything you wish for !</h2>
       <p class="pt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ipsum quidem eum molestiae cupiditate, harum eos ducimus neque enim fuga.</p>
 
+      <?php if (isset($_SESSION['name'])): ?>
+        <h3>Welcome <?= $_SESSION['name'] ?> </h3>
+      <?php else : ?>
       <div class="mt-5 gap-6 flex items-center">
         <a href="loginForm.php">Log In</a>
         <a href="signup.php" class="py-2 px-4 rounded-full bg-sky-400">Sign Up</a>
       </div>
+      <?php endif; ?>
     </div>
 
     <div class="my-6">

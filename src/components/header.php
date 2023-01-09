@@ -25,6 +25,10 @@
         <li><a href="index.html" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full duration-[250ms]">Home</a></li>
         <li><a href="recherche.php" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full duration-[250ms]">Browse</a></li>
         <li><a href="" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full duration-[250ms]">Discover</a></li>
+        <?php if(isset($_SESSION['name'])) :  ?>
+        <li><a href="./logout.php" class="px-4 py-2 hover:bg-opacity-30 hover:bg-white  rounded-full duration-[250ms]">Logout</a></li>
+
+        <?php endif; ?>
       </ul>
     </nav>
 </header>
