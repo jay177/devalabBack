@@ -146,3 +146,8 @@ function getTopRated(){
   })
 }
 
+
+document.getElementById('action').onclick = function() {
+  let genre = "28"
+}​;​
+
