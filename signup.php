@@ -8,7 +8,7 @@
   <script src="https://kit.fontawesome.com/23761b7654.js" crossorigin="anonymous"></script>
   <title>Log In - TBM</title>
 </head>
-<body class="bg-[url('/img/bg.svg')] bg-cover bg-no-repeat text-white text-base m-0 p-0 box-border w-full">
+<body class="bg-[url('../img/bg.svg')] bg-cover bg-no-repeat text-white text-base m-0 p-0 box-border w-full">
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

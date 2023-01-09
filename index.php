@@ -8,7 +8,7 @@
   <script src="https://kit.fontawesome.com/23761b7654.js" crossorigin="anonymous"></script>
   <title>Home - TBM</title>
 </head>
-<body class="bg-[url('/img/bg.svg')] bg-cover bg-no-repeat text-white text-base m-0 p-0 box-border w-full">
+<body class="bg-[url('../img/bg.svg')] bg-cover bg-no-repeat text-white text-base m-0 p-0 box-border w-full">
 
 <div class="hidden w-4/5 h-[100vh]  pl-14 pt-[50%] items-start gap-24 flex-col md:hidden">
     <div class="block md:hidden">
@@ -51,40 +51,35 @@
     
   </header>
   <section class="w-11/12 mx-auto my-7">
-    <div class="flex flex-col items-center pb-9 border-b-2 border-sky-400">
+    <div class="flex flex-col text-center items-center pb-9 border-b-2 border-sky-400">
       <h2 class="font-bold text-3xl tracking-wide underline decoration-sky-400">Find everything you wish for !</h2>
       <p class="pt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ipsum quidem eum molestiae cupiditate, harum eos ducimus neque enim fuga.</p>
     </div>
 
     <div class="my-6">
       <div class="flex justify-between items-center">
-        <h3 class="font-semibold tracking-wide text-lg">Trendings</h3>
-        <div class="flex items-center gap-4 cursor-pointer">
-          <p class="text-opacity-30">See more</p>
-          <i class="fa-solid fa-chevron-right  text-opacity-30"></i>
-        </div>
+        <h3 class="font-semibold tracking-wide text-lg">Popular Movies</h3>
       </div>
-      <div class="flex gap-6 mt-5">
-        <div class="w-[150px] h-[calc(150px * 1.5)]">
-          <a href="black.html">
-            <div class=" rounded-lg overflow-hidden w-full relative">
-              <img src="img/black-panther.webp" alt="">
-              <div class="absolute top-1 right-1 w-[38px] h-[38px] rounded-full bg-zinc-700 flex justify-center items-center p-[4px]">
-                <div class="bg-green-400 w-full h-full rounded-full flex justify-center items-center  ">
-                  <p class="font-bold text-xs">75%</p>
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-wrap content-start relative py-2 px-2">
-              <p class="font-semibold text-sm">Black Panther : Wakanda Forever</p>
-              <p class="text-gray-400 text-sm">9 nov. 2022</p>
-            </div>
-          </a>
-        </div>
+      <div class="flex gap-6 mt-5 overflow-x-auto" id="topMovies">
+      </div>
+    </div>
+
+    <div class="my-6">
+      <div class="flex justify-between items-center">
+        <h3 class="font-semibold tracking-wide text-lg">Top Rated</h3>
+      </div>
+      <div class="flex gap-6 mt-5 overflow-x-auto" id="topRated">
       </div>
     </div>
   </section>
-  
+  <script src="https://kit.fontawesome.com/23761b7654.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    getTopMovies();
+    getTopRated();
+  </script>
   
 </body>
 </html>
