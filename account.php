@@ -80,14 +80,19 @@ if ($_POST){
         </div>
       </div>
     <?php endforeach; ?>
-    <div class="modal w-fit">
-    <form action="" method="post" class="py-4 px-8 bg-sky-400 w-fit flex flex-col">
-      <input type="text" name="name" id="name" placeholder="Album name">
-      <label for="private">Is Private</label>
-      <input type="checkbox" name="private" id="private">
-      <input type="submit" value="Create" class="bg-white text-black">
-    </form>
-  </div>
+    <button id="open-modal-btn">Ouvrir la modale</button>
+
+
+
+<div class="modal w-fit" id="modal">
+  <form action="" method="post" class="py-4 px-8 bg-sky-400 w-fit flex flex-col" id="modal-content">
+    <span id="close-modal-btn">&times;</span>
+    <input type="text" name="name" id="name" placeholder="Album name">
+    <label for="private">Is Private</label>
+    <input type="checkbox" name="private" id="private">
+    <input type="submit" value="Create" class="bg-white text-black">
+  </form>
+</div>
     
   </section>
   <script src="https://kit.fontawesome.com/23761b7654.js" crossorigin="anonymous"></script>
