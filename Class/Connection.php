@@ -45,4 +45,16 @@ class Connection{
 		]);
 		return $statement->fetchAll(PDO::FETCH_ASSOC);
 	}
+
+	public function insertAlbum(Album $album){
+		$query = "INSERT INTO `album` (name, user_id, is_private)
+		VALUES (:name, :user_id, :is_private)";
+		$statement = $this->pdo->prepare($query);
+		
+		return $statement->execute([
+			'name' =>$album->name,
+			'user_id' => $album->user_id,
+			'is_private' => $album->is_private
+		]);
+	}
 }

@@ -4,6 +4,7 @@
 session_start();
 
 require_once './Class/Connection.php';
+require_once './Class/Album.php';
 
 if (!isset($_SESSION['name'])){
   header('Location: index.php');
@@ -15,6 +16,22 @@ $result = $connection->selectUser($_SESSION['mail']);
 
 $userAlbums = $connection->getUserAlbums($_SESSION['mail']);
 
+
+if ($_POST){
+  if($_POST['private']){
+    $is_private = 1;
+  } else {
+    $is_private = 0;
+  }
+  $album = new Album(
+    $_POST['name'],
+    intval($result['id'], 10),
+    $is_private
+  );
+
+  $connection = new Connection();
+  $result = $connection->insertAlbum($album);
+}
 ?>
 
 <!DOCTYPE html>
@@ -63,9 +80,15 @@ $userAlbums = $connection->getUserAlbums($_SESSION['mail']);
         </div>
       </div>
     <?php endforeach; ?>
-    <div class="w-full md:w-1/5 h-[50vh] rounded-[30px] bg-white bg-opacity-30 flex items-center justify-center cursor-pointer modal-open">
-      <i class="fa-solid fa-circle-plus text-3xl"></i>
-    </div>
+    <div class="modal w-fit">
+    <form action="" method="post" class="py-4 px-8 bg-sky-400 w-fit flex flex-col">
+      <input type="text" name="name" id="name" placeholder="Album name">
+      <label for="private">Is Private</label>
+      <input type="checkbox" name="private" id="private">
+      <input type="submit" value="Create" class="bg-white text-black">
+    </form>
+  </div>
+    
   </section>
   <script src="https://kit.fontawesome.com/23761b7654.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
