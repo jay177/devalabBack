@@ -80,11 +80,11 @@ if ($_POST){
         </div>
       </div>
     <?php endforeach; ?>
-    <button id="open-modal-btn">Ouvrir la modale</button>
+    <button id="open-modal-btn">Create Album</button>
 
 
 
-<div class="modal w-fit" id="modal">
+<div class="modal w-fit hidden" id="modal">
   <form action="" method="post" class="py-4 px-8 bg-sky-400 w-fit flex flex-col" id="modal-content">
     <span id="close-modal-btn">&times;</span>
     <input type="text" name="name" id="name" placeholder="Album name">
