@@ -99,5 +99,6 @@ if ($_POST){
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="script.js"></script>
+  <script src="modal.js"></script>
 </body>
 </html>
