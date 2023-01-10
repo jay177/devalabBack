@@ -15,7 +15,6 @@ session_start();
 <body class="bg-[url('../img/bg.svg')] bg-cover bg-no-repeat text-white text-base m-0 p-0 box-border w-full">
 <?php require_once('./src/components/header.php') ?>
 
-
   <section class="w-11/12 mx-auto my-7">
     
     <!-- About -->
